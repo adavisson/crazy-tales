@@ -28,3 +28,11 @@ code {
 .form-control {
   border-color: lightsalmon;
 }
+
+.story {
+  display: inline-block;
+  width: 65%;
+  border: 3px solid #ffa07a;
+  border-radius: 20px;
+  padding: 10px;
+}
