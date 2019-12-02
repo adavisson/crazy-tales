@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom';
 import Home from './components/Home';
 import NavBar from './components/NavBar';
+import Templates from './components/Templates';
+import About from './components/About';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <div className="App">
         <NavBar />
         <Route exact path="/" component={Home} />
+        <Route path="/templates" component={Templates} />
+        <Route path="/about" component={About} />
       </div>
     </Router>
   );
