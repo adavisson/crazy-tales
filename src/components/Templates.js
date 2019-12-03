@@ -7,6 +7,7 @@ const Templates = () => {
   const [template, setTemplate] = useState({ blanks: [] });
   const [values, setValues] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [width, setWidth] = useState(0);
   
   useEffect(() => {
     const fetchData = async() => {
@@ -18,6 +19,13 @@ const Templates = () => {
     }
     fetchData();
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('resize',() => {
+      setWidth(window.innerWidth);
+      });
+    return () => window.removeEventListener('resize',() => setWidth(window.innerWidth));
+  },[width]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,21 +40,29 @@ const Templates = () => {
   }
 
   const renderForm = () => {
-      return (
-        <Form onSubmit={handleSubmit}>
-          {template.blanks.map((blank, index) => {
-            return (
-              <Form.Group>
-                <Form.Label>{blank}</Form.Label>
-                <Form.Control type="text" id={`word_${index}`} value={values[index]} onChange={handleChange} required/>
-              </Form.Group>
-            )
-          })}
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
-      )
+    let isDesktop;
+    if (width < 700){
+      isDesktop = "mobile";
+    } else {
+      isDesktop = "desktop";
+    }
+
+
+    return (
+      <Form className={isDesktop} onSubmit={handleSubmit}>
+        {template.blanks.map((blank, index) => {
+          return (
+            <Form.Group>
+              <Form.Label>{blank}</Form.Label>
+              <Form.Control type="text" id={`word_${index}`} value={values[index]} onChange={handleChange} required/>
+            </Form.Group>
+          )
+        })}
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    )
   }
 
   const refreshPage = () => {

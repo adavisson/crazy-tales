@@ -31,13 +31,18 @@ code {
 
 .story {
   display: inline-block;
-  width: 65%;
+  width: 75%;
   border: 3px solid #ffa07a;
   border-radius: 20px;
   padding: 10px;
 }
 
-form {
+.desktop {
   display: inline-block;
   width: 50%;
+}
+
+.mobile {
+  display: inline-block;
+  width: 85%;
 }
