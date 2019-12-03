@@ -41,7 +41,7 @@ const Templates = () => {
 
   const renderForm = () => {
     let isDesktop;
-    if (width < 700){
+    if (width < 1080){
       isDesktop = "mobile";
     } else {
       isDesktop = "desktop";
