@@ -12,6 +12,9 @@ const NavBar = () => {
           <Nav.Link href="/templates">Templates</Nav.Link>
           <Nav.Link href="/about">About</Nav.Link>
         </Nav>
+        <Nav inline>
+          <Nav.Link href="https://andydavisson.com">Back to andydavisson.com</Nav.Link>
+        </Nav>
       </Navbar.Collapse>
     </Navbar>
   );
