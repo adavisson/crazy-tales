@@ -36,3 +36,8 @@ code {
   border-radius: 20px;
   padding: 10px;
 }
+
+form {
+  display: inline-block;
+  width: 50%;
+}
