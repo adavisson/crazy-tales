@@ -11,7 +11,7 @@ const Templates = () => {
   useEffect(() => {
     const fetchData = async() => {
       const result = await axios(
-        'http://madlibz.herokuapp.com/api/random',
+        'https://madlibz.herokuapp.com/api/random',
       );
 
       setTemplate(result.data);
