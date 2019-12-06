@@ -54,11 +54,13 @@ code {
 }
 
 .form {
+  min-width: 25%;
   flex: 0 1 auto;
 }
 
 .form-control {
   border-color: lightsalmon;
+  width: 100%;
 }
 
 .story {
@@ -77,5 +79,14 @@ code {
   }
   .template  h1{
     max-width: 90%;
+  }
+  .form {
+    min-width: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .form {
+    min-width: 85%;
   }
 }
