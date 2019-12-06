@@ -33,30 +33,49 @@ code {
   margin: auto;
 }
 
+.template {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+}
+
+.about {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+}
+
+.template h1 {
+  max-width: 50%;
+}
+
+.form {
+  flex: 0 1 auto;
+}
+
 .form-control {
   border-color: lightsalmon;
 }
 
 .story {
-  display: inline-block;
-  width: 60%;
+  /* display: inline-block;
+  width: 60%; */
+  flex: 0 1 auto;
+  max-width: 65%;
   border: 3px solid #ffa07a;
   border-radius: 20px;
   padding: 10px;
 }
 
-.desktop {
-  display: inline-block;
-  width: 50%;
-}
-
-.mobile {
-  display: inline-block;
-  width: 85%;
-}
-
 @media only screen and (max-width: 900px){
   .story {
-    width: 90%;
+    max-width: 90%;
+  }
+  .template  h1{
+    max-width: 90%;
   }
 }
