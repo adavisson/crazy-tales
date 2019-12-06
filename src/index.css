@@ -25,13 +25,21 @@ code {
   border-color: lightsalmon;
 }
 
+.home {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+}
+
 .form-control {
   border-color: lightsalmon;
 }
 
 .story {
   display: inline-block;
-  width: 75%;
+  width: 60%;
   border: 3px solid #ffa07a;
   border-radius: 20px;
   padding: 10px;
@@ -45,4 +53,10 @@ code {
 .mobile {
   display: inline-block;
   width: 85%;
+}
+
+@media only screen and (max-width: 900px){
+  .story {
+    width: 90%;
+  }
 }
