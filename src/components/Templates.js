@@ -11,21 +11,16 @@ const Templates = () => {
   
   useEffect(() => {
     const fetchData = async() => {
-      const result = await axios(
+      const result = await fetch(
         'https://madlibz.herokuapp.com/api/random',
       );
-
-      setTemplate(result.data);
+      const data = await result.json();
+      setTemplate(data);
     }
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   window.addEventListener('resize',() => {
-  //     setWidth(window.innerWidth);
-  //     });
-  //   return () => window.removeEventListener('resize',() => setWidth(window.innerWidth));
-  // },[width]);
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -40,14 +35,6 @@ const Templates = () => {
   }
 
   const renderForm = () => {
-    // let isDesktop;
-    // if (width < 700){
-    //   isDesktop = "mobile";
-    // } else {
-    //   isDesktop = "desktop";
-    // }
-
-
     return (
       <Form className="form" onSubmit={handleSubmit}>
         {template.blanks.map((blank, index) => {
