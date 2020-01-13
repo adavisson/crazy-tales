@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import axios from 'axios';
 import Story from './Story';
 
 const Templates = () => {
