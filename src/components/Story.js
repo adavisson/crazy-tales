@@ -18,6 +18,8 @@ const Story = (props) => {
             return(
               string
             )
+          } else {
+            return ''
           }
         })}
       </>
